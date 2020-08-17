@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><%=title%></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Product Category </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/add-new-product" class="dropdown-item">Add New Product</a></li>
+                      <li><a href="/all-product" class="dropdown-item">View All Product</a></li>
+                    </ul>
+                </li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+            <div class="navbar-header" style="float: right;">
+              <a class="navbar-brand"  href="#">Logged in As  <%if(loginUser){%> <%=loginUser%> <% } %></a>
+          </div>
+        </div>
+    </nav>
